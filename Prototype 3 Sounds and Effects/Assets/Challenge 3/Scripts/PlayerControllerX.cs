@@ -38,6 +38,11 @@ public class PlayerControllerX : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * floatForce);
         }
+
+        if (transform.position.y > 15)
+        {
+            transform.position = new Vector3(transform.position.x, 15, transform.position.z);
+        }
     }
 
     private void OnCollisionEnter(Collision other)
